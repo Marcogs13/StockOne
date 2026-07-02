@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | StockOne</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-page="catalogo">
+
+<div class="layout">
+
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+
+        <div id="topbar"></div>
+
+        <section class="cards">
+            <div class="stat-card">
+                <div class="stat-icon bg-blue">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <h3>Productos en catálogo</h3>
+                <p id="totalCatalogo">0</p>
+                <small>Productos base registrados</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-green">
+                    <i class="fa-solid fa-tags"></i>
+                </div>
+                <h3>Categorías</h3>
+                <p id="totalCategorias">0</p>
+                <small>Abarrotes, bebidas y más</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-purple">
+                    <i class="fa-solid fa-industry"></i>
+                </div>
+                <h3>Marcas</h3>
+                <p id="totalMarcas">0</p>
+                <small>Marcas comerciales</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-red">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <h3>Stock</h3>
+                <p>No aplica</p>
+                <small>El stock se maneja en Inventario</small>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Lista maestra de productos</h2>
+
+                <button class="btn btn-primary" id="btnAbrirFormulario">
+                    <i class="fa-solid fa-plus"></i> Nuevo producto base
+                </button>
+            </div>
+
+            <table class="table-modern">
+                <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Producto</th>
+                    <th>Marca</th>
+                    <th>Categoría</th>
+                    <th>Unidad</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+
+                <tbody id="tablaCatalogo"></tbody>
+            </table>
+        </section>
+
+        <section class="panel formulario-oculto" id="formularioCatalogo">
+            <div class="panel-header">
+                <h2>Nuevo producto base</h2>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Código</label>
+                    <input type="text" id="codigo" placeholder="Ejemplo: P011">
+                </div>
+
+                <div class="form-group">
+                    <label>Producto</label>
+                    <input type="text" id="nombre" placeholder="Ejemplo: Café Altomayo 250g">
+                </div>
+
+                <div class="form-group">
+                    <label>Marca</label>
+                    <input type="text" id="marca" placeholder="Ejemplo: Altomayo">
+                </div>
+
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <select id="categoria">
+                        <option value="">Seleccione categoría</option>
+                        <option>Abarrotes</option>
+                        <option>Bebidas</option>
+                        <option>Lácteos</option>
+                        <option>Limpieza</option>
+                        <option>Golosinas</option>
+                        <option>Conservas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Unidad</label>
+                    <select id="unidad">
+                        <option value="">Seleccione unidad</option>
+                        <option>Unidad</option>
+                        <option>Bolsa</option>
+                        <option>Botella</option>
+                        <option>Lata</option>
+                        <option>Paquete</option>
+                        <option>Caja</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn-success" id="btnGuardarProducto">
+                <i class="fa-solid fa-save"></i> Guardar producto
+            </button>
+        </section>
+        <div id="modalContainer"></div>
+    </main>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/catalogo.js"></script>
+
+</body>
+</html>

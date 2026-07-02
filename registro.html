@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear cuenta | StockOne</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="login-body">
+
+<div class="login-wrapper">
+
+    <section class="login-info">
+        <div class="brand-login">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>StockOne</span>
+        </div>
+
+        <h1>Crea tu cuenta en StockOne</h1>
+        <p>Registra un usuario y contraseña para acceder al sistema.</p>
+    </section>
+
+    <section class="login-card">
+        <h2>Crear cuenta</h2>
+        <p>Completa tus datos de acceso</p>
+
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" id="usuarioRegistro" placeholder="Ejemplo: tienda1">
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="passwordRegistro" placeholder="Ejemplo: 123456">
+        </div>
+
+        <button class="btn btn-success login-btn" id="btnRegistrarCuenta">
+            <i class="fa-solid fa-user-plus"></i> Crear cuenta
+        </button>
+
+        <small class="login-help">
+            ¿Ya tienes cuenta? <a href="index.html">Iniciar sesión</a>
+        </small>
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/registro.js"></script>
+
+</body>
+</html>

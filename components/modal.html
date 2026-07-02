@@ -1,0 +1,62 @@
+<div class="modal-overlay" id="modalProducto">
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <h2>Nuevo producto base</h2>
+            <button class="modal-close" id="btnCerrarModal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Código</label>
+                <input type="text" id="codigo" placeholder="Ejemplo: P011">
+            </div>
+
+            <div class="form-group">
+                <label>Producto</label>
+                <input type="text" id="nombre" placeholder="Ejemplo: Café Altomayo 250g">
+            </div>
+
+            <div class="form-group">
+                <label>Marca</label>
+                <input type="text" id="marca" placeholder="Ejemplo: Altomayo">
+            </div>
+
+            <div class="form-group">
+                <label>Categoría</label>
+                <select id="categoria">
+                    <option value="">Seleccione categoría</option>
+                    <option>Abarrotes</option>
+                    <option>Bebidas</option>
+                    <option>Lácteos</option>
+                    <option>Limpieza</option>
+                    <option>Golosinas</option>
+                    <option>Conservas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Unidad</label>
+                <select id="unidad">
+                    <option value="">Seleccione unidad</option>
+                    <option>Unidad</option>
+                    <option>Bolsa</option>
+                    <option>Botella</option>
+                    <option>Lata</option>
+                    <option>Paquete</option>
+                    <option>Caja</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <button class="btn btn-danger" id="btnCancelarModal">Cancelar</button>
+            <button class="btn btn-success" id="btnGuardarProducto" type="button">
+    <i class="fa-solid fa-save"></i> Guardar producto
+</button>
+        </div>
+
+    </div>
+</div>

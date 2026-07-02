@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario - StockOne</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div class="page-title">
+                <h1>Inventario</h1>
+                <p>Registro de stock, precios y control de reabastecimiento</p>
+            </div>
+        </header>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Agregar producto al inventario</h2>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Producto</label>
+                    <select id="productoSelect">
+                        <option value="">Seleccione un producto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Código</label>
+                    <input type="text" id="codigo" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <input type="text" id="categoria" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Marca</label>
+                    <input type="text" id="marca" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Unidad</label>
+                    <input type="text" id="unidad" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input type="number" id="stock" placeholder="Ejemplo: 25">
+                </div>
+
+                <div class="form-group">
+                    <label>Precio compra</label>
+                    <input type="number" id="precioCompra" placeholder="Ejemplo: 16.50">
+                </div>
+
+                <div class="form-group">
+                    <label>Precio venta</label>
+                    <input type="number" id="precioVenta" placeholder="Ejemplo: 18.50">
+                </div>
+
+                <div class="form-group">
+                    <label>Stock mínimo</label>
+                    <input type="number" id="stockMinimo" placeholder="Ejemplo: 10">
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnAgregar">
+                <i class="fa-solid fa-plus"></i> Agregar al inventario
+            </button>
+        </section>
+
+        <br>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Inventario registrado</h2>
+            </div>
+
+            <table class="table-modern">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Stock</th>
+                        <th>Precio venta</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaInventario">
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+<script src="js/layout.js"></script>
+<script src="js/inventario.js"></script>
+</body>
+</html>

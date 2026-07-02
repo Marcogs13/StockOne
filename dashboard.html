@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | StockOne</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-page="dashboard">
+
+<div class="layout">
+
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+
+        <div id="topbar"></div>
+
+        <section class="cards">
+            <div class="stat-card">
+                <div class="stat-icon bg-blue">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+                <h3>Productos en inventario</h3>
+                <p>128</p>
+                <small>Registrados actualmente</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-green">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                </div>
+                <h3>Ventas del día</h3>
+                <p>S/ 850</p>
+                <small>Actualizado hoy</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3>Stock bajo</h3>
+                <p>7</p>
+                <small>Requieren reposición</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-purple">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <h3>Movimientos</h3>
+                <p>42</p>
+                <small>Entradas y salidas</small>
+            </div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Ventas por día</h2>
+                </div>
+                <canvas id="ventasChart"></canvas>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Productos por categoría</h2>
+                </div>
+                <canvas id="categoriasChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Productos con stock bajo</h2>
+
+                    <button class="btn btn-primary">
+                        Ver inventario
+                    </button>
+                </div>
+
+                <table class="table-modern">
+                    <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>P001</td>
+                        <td>Arroz Costeño 5kg</td>
+                        <td>3</td>
+                        <td><span class="badge badge-danger">Crítico</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>P002</td>
+                        <td>Aceite Primor 1L</td>
+                        <td>5</td>
+                        <td><span class="badge badge-warning">Bajo</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>P003</td>
+                        <td>Leche Gloria 400g</td>
+                        <td>1</td>
+                        <td><span class="badge badge-danger">Crítico</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Reabastecimiento</h2>
+                </div>
+
+                <div class="restock-list">
+                    <div class="restock-item">
+                        <h4>Arroz Costeño 5kg</h4>
+                        <p>Comprar 20 unidades.</p>
+                    </div>
+
+                    <div class="restock-item">
+                        <h4>Leche Gloria 400g</h4>
+                        <p>Comprar 30 unidades.</p>
+                    </div>
+
+                    <div class="restock-item">
+                        <h4>Aceite Primor 1L</h4>
+                        <p>Comprar 15 unidades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/layout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

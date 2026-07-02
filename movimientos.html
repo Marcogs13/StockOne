@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimientos | StockOne</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-page="movimientos">
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div id="topbar"></div>
+
+        <section class="cards">
+            <div class="stat-card">
+                <div class="stat-icon bg-green">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <h3>Entradas</h3>
+                <p>18</p>
+                <small>Productos ingresados</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-red">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+                <h3>Salidas</h3>
+                <p>12</p>
+                <small>Ventas o retiros</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-purple">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <h3>Ajustes</h3>
+                <p>4</p>
+                <small>Correcciones de stock</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon bg-blue">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <h3>Total movimientos</h3>
+                <p>34</p>
+                <small>Registros auditables</small>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Registrar movimiento manual</h2>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Producto</label>
+                    <select id="productoMovimiento">
+                        <option value="">Seleccione un producto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipo de movimiento</label>
+                    <select id="tipoMovimiento">
+                        <option value="">Seleccione tipo</option>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Salida">Salida</option>
+                        <option value="Ajuste">Ajuste</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input type="number" id="cantidadMovimiento" placeholder="Ejemplo: 10">
+                </div>
+
+                <div class="form-group">
+                    <label>Motivo</label>
+                    <select id="motivoMovimiento">
+                        <option value="">Seleccione motivo</option>
+                        <option>Compra de mercadería</option>
+                        <option>Venta realizada</option>
+                        <option>Corrección de inventario</option>
+                        <option>Producto dañado</option>
+                        <option>Devolución</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnRegistrarMovimiento">
+                <i class="fa-solid fa-plus"></i> Registrar movimiento
+            </button>
+        </section>
+
+        <br>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Historial de movimientos</h2>
+            </div>
+
+            <table class="table-modern">
+                <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Producto</th>
+                    <th>Tipo</th>
+                    <th>Cantidad</th>
+                    <th>Motivo</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+
+                <tbody id="tablaMovimientos"></tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/movimientos.js"></script>
+
+</body>
+</html>

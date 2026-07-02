@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | StockOne</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="login-body">
+
+<div class="login-wrapper">
+
+    <section class="login-info">
+        <div class="brand-login">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>StockOne</span>
+        </div>
+
+        <h1>Gestiona tu inventario de manera simple</h1>
+        <p>Controla productos, ventas, stock y movimientos desde un solo sistema.</p>
+    </section>
+
+    <section class="login-card">
+        <h2>Bienvenido</h2>
+        <p>Inicia sesión o crea tu cuenta</p>
+
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" id="usuario" placeholder="Ejemplo: admin">
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="Ejemplo: 123456">
+        </div>
+
+        <button class="btn btn-primary login-btn" id="btnLogin">
+            <i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión
+        </button>
+
+        <a href="registro.html" class="btn btn-success login-btn">
+    <i class="fa-solid fa-user-plus"></i> Crear cuenta
+</a>
+
+        <small class="login-help">
+            Usa un usuario simple, sin espacios. Ejemplo: admin
+        </small>
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>

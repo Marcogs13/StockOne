@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas | StockOne</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-page="ventas">
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div id="topbar"></div>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Registrar venta</h2>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Producto</label>
+                    <select id="productoVenta">
+                        <option value="">Seleccione un producto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Stock disponible</label>
+                    <input type="text" id="stockDisponible" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Precio unitario</label>
+                    <input type="text" id="precioUnitario" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input type="number" id="cantidadVenta" placeholder="Ejemplo: 2">
+                </div>
+
+                <div class="form-group">
+                    <label>Total</label>
+                    <input type="text" id="totalVenta" readonly>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnRegistrarVenta">
+                <i class="fa-solid fa-cart-plus"></i> Registrar venta
+            </button>
+        </section>
+
+        <br>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Ventas registradas</h2>
+            </div>
+
+            <table class="table-modern">
+                <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+
+                <tbody id="tablaVentas"></tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/ventas.js"></script>
+
+</body>
+</html>

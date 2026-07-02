@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración | StockOne</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-page="configuracion">
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+        <div id="topbar"></div>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Datos de la tienda</h2>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nombre de la tienda</label>
+                    <input type="text" id="nombreTienda" placeholder="Ejemplo: Bodega San Miguel">
+                </div>
+
+                <div class="form-group">
+                    <label>RUC</label>
+                    <input type="text" id="rucTienda" placeholder="Ejemplo: 20123456789">
+                </div>
+
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" id="telefonoTienda" placeholder="Ejemplo: 999 888 777">
+                </div>
+
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" id="direccionTienda" placeholder="Ejemplo: Av. Principal 123">
+                </div>
+
+                <div class="form-group">
+                    <label>Stock mínimo general</label>
+                    <input type="number" id="stockMinimoGeneral" placeholder="Ejemplo: 10">
+                </div>
+
+                <div class="form-group">
+                    <label>Alertas de stock</label>
+                    <select id="alertasStock">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="btnGuardarConfig">
+                <i class="fa-solid fa-save"></i> Guardar configuración
+            </button>
+        </section>
+
+        <br>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Configuración actual</h2>
+            </div>
+
+            <table class="table-modern">
+                <tbody id="tablaConfiguracion">
+                    <tr>
+                        <td>Nombre de tienda</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>RUC</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Dirección</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Stock mínimo general</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Alertas de stock</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/configuracion.js"></script>
+
+</body>
+</html>
